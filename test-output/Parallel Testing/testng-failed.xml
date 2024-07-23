@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [Parallel Testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="Test Parallel(failed)">
+    <classes>
+      <class name="Testcases_Ramya.DocumentscenarioTest">
+        <methods>
+          <include name="VerifyUpdateafteruserfinishesthedocument"/>
+          <include name="VerifyDeclinedDeletedocument"/>
+          <include name="VerifyAddEntityfieldstodocumentprimaryfields4"/>
+          <include name="Verifyotheroptionsvoiddoc"/>
+          <include name="VerifyChangeDoc"/>
+          <include name="VerifyWaitingForOthersRenamedocument"/>
+          <include name="VerifySentResenddocument"/>
+          <include name="Verifychangeuser"/>
+          <include name="VerifyArchivedRenamedocuments"/>
+          <include name="VerifySentdocumentsettings"/>
+          <include name="VerifyWaitingForOthersResenddocument"/>
+          <include name="VerifyCCSenderSingerWOEWOA"/>
+          <include name="SplitSinglelineText"/>
+          <include name="VerifyCompletedSenttomail"/>
+          <include name="VerifyDraftSaveAsTemplate"/>
+          <include name="VerifyProcessSingleDoc"/>
+          <include name="VerifyWaitformeWaitforme"/>
+          <include name="VerifyWaitingForOthersSaveastemplate"/>
+          <include name="VerifySenderMultipleApprovers"/>
+          <include name="VerifyDeletePages"/>
+          <include name="VerifyDeclinedVoiddocument"/>
+          <include name="VerifyCCSignerSenderWOEWOA"/>
+          <include name="VerifyApprovedSaveAsTemplate"/>
+          <include name="Verifyotheroptionsfinishlater"/>
+          <include name="VerifySentRenamedocument"/>
+          <include name="VerifyClonedocumentForsinglesender"/>
+          <include name="VerifyCopylink"/>
+          <include name="VerifyDeclinedDeclinedRenamedocument"/>
+          <include name="VerifyApprovedVoidDocument"/>
+          <include name="VerifySingerCCSenderWOEWOA"/>
+          <include name="VerifyCompletedRenamedocument"/>
+          <include name="VerifyWaitingForOthersCorrectdocument"/>
+          <include name="VerifyApproverSenderDecline"/>
+          <include name="VerifyApprovedApprovedDeleteDocument"/>
+          <include name="VerifyArchivedPermanentdelete"/>
+          <include name="Verifyotheroptionsprintandsign"/>
+          <include name="VerifyotheroptionsCorrectdoc"/>
+          <include name="VerifyDraftDownloadOriginal"/>
+          <include name="VerifyDraftDeleteDocument"/>
+          <include name="VerifyDocForSingleSender"/>
+          <include name="VerifyProcessWithOutSingledoc"/>
+          <include name="VerifyApprovedCorrectdocumentDocuments"/>
+          <include name="VerifyDaftsentdocument"/>
+          <include name="VerifyMultpleApproverSender"/>
+          <include name="VerifySendersigCCorderWOEWOA"/>
+          <include name="VerifySentDeletedocument"/>
+          <include name="Verifyotheroptionssaveastem"/>
+          <include name="VerifySentsavetoTemplate"/>
+          <include name="VerifyDelineddocument"/>
+          <include name="VerifyCompletedDeletedocuement"/>
+          <include name="VerifyPdfAutoFillreceiver"/>
+          <include name="VerifyOtheroptionsdeletedocument"/>
+          <include name="VerifyAppSigSenderorderWOEWOA"/>
+          <include name="VerifyCompletedSaveastemplate"/>
+          <include name="VerifyApprovedResendDocument"/>
+          <include name="initialize"/>
+          <include name="VerifYVoidSaveastemplate"/>
+          <include name="VerifyWaitingForOthersVoiddocument"/>
+          <include name="VerifyLoginFunctionalityWithValidCredantials"/>
+          <include name="VerifyDeclinedDocumentSettings"/>
+          <include name="Verifychatandlogs"/>
+          <include name="Verifyotheroptionshistory"/>
+          <include name="VerifyCompletedClonedocument"/>
+          <include name="VerifySentCorrectDocument"/>
+          <include name="VerifyCompletedDownloaddocuement"/>
+          <include name="VerifyApproverSenderapprove"/>
+          <include name="VerifyVoidClonedocument"/>
+          <include name="VerifyApprovedRenameDocument"/>
+          <include name="Verifyotheroptionssettings"/>
+          <include name="VerifyUpdateAddEntityfieldstodocumentprimaryfields"/>
+          <include name="VerifySenderCCSignerWOEWOA"/>
+          <include name="VerfySaveAsDraft"/>
+          <include name="VerifySenderMultipleCC"/>
+          <include name="VerifyApprovedDocumentSettings"/>
+          <include name="VerifyWaitingForOthersDocumentsettings"/>
+          <include name="VerifyLockFields"/>
+          <include name="VerifySentVoiddocument"/>
+          <include name="VerifyCompletedSharewithothers"/>
+          <include name="VerifyStrikeEraseuploadDocument"/>
+          <include name="VerifyAddPages"/>
+          <include name="VerifyVoidDeletedocument"/>
+          <include name="VerifyBuldDeleteDocuments"/>
+          <include name="VerifyDraftrenamedocument"/>
+          <include name="VerifySettings"/>
+          <include name="VerifyArchivedUndodocument"/>
+          <include name="VerifyWaitingForOthersDeletedocument"/>
+          <include name="VerifyMultpleCCSender"/>
+          <include name="VerifySigSenderCCorderWOEWOA"/>
+          <include name="VerifyDraftDocumentSettings"/>
+          <include name="VerifyOtheroptionsdownload"/>
+        </methods>
+      </class> <!-- Testcases_Ramya.DocumentscenarioTest -->
+    </classes>
+  </test> <!-- Test Parallel(failed) -->
+</suite> <!-- Failed suite [Parallel Testing] -->
