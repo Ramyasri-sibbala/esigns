@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ramya.sibbala\AppData\Local\Temp\testng-eclipse-19586147\testng-customsuite.xml</span>
+                    <span>C:\Users\ramya.sibbala\AppData\Local\Temp\testng-eclipse-1959493996\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,29 +129,17 @@
                   <a name="VerifyLemitedPeriod">
                   </a> <!-- VerifyLemitedPeriod -->
                   <span class="method-name">VerifyLemitedPeriod</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=126.0.6478.128)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder=&apos;Enter first name&apos;] (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af442b605db3cad795629f5831df1580, clearElement {id=f.CBCFE67A90139B9152FDCEBB23BC109E.d.E1B446AA26785C4C72FAF0F5B9BF21E6.e.272}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAMYA~1.SIB\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63836}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63836/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af442b605db3cad795629f5831df1580)] -&gt; xpath: (//input[@class=&apos;el-input__inner&apos;])[1]]
-Session ID: af442b605db3cad795629f5831df1580
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
-	at Pages.DocumentsScenarios.RemainderSettings(DocumentsScenarios.java:2943)
-	at Testcases_Ramya.DocumentscenarioTest.VerifyLemitedPeriod(DocumentscenarioTest.java:2035)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAMYA~1.SIB\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65360/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ae87049b9ec8a635e7ed7f8acc0e083
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Pages.DocumentsScenarios.sendKeysToElement(DocumentsScenarios.java:46)
+	at Pages.DocumentsScenarios.Addmail(DocumentsScenarios.java:3007)
+	at Testcases_Ramya.DocumentscenarioTest.VerifyLemitedPeriod(DocumentscenarioTest.java:2043)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -187,7 +175,7 @@ Session ID: af442b605db3cad795629f5831df1580
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ramya.sibbala\AppData\Local\Temp\testng-eclipse-19586147\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ramya.sibbala\AppData\Local\Temp\testng-eclipse-1959493996\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -244,12 +232,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyLemitedPeriod')
 data.setCell(0, 2, 'Testcases_Ramya.DocumentscenarioTest')
-data.setCell(0, 3, 151863);
+data.setCell(0, 3, 311484);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -499,7 +487,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyLemitedPeriod</span>
-                <span class="method-start">8469 ms</span>
+                <span class="method-start">2670 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

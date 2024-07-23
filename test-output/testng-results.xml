@@ -2,52 +2,37 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-23T10:27:34 IST" name="Default suite" finished-at="2024-07-23T10:30:14 IST" duration-ms="160365">
+  <suite started-at="2024-07-23T14:46:17 IST" name="Default suite" finished-at="2024-07-23T14:51:31 IST" duration-ms="314179">
     <groups>
     </groups>
-    <test started-at="2024-07-23T10:27:34 IST" name="Default test" finished-at="2024-07-23T10:30:14 IST" duration-ms="160365">
+    <test started-at="2024-07-23T14:46:17 IST" name="Default test" finished-at="2024-07-23T14:51:31 IST" duration-ms="314179">
       <class name="Testcases_Ramya.DocumentscenarioTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:Testcases_Ramya.DocumentscenarioTest@c730b35]" started-at="2024-07-23T10:27:34 IST" name="initialize" finished-at="2024-07-23T10:27:42 IST" duration-ms="8469" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:Testcases_Ramya.DocumentscenarioTest@c730b35]" started-at="2024-07-23T14:46:17 IST" name="initialize" finished-at="2024-07-23T14:46:20 IST" duration-ms="2668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="VerifyLemitedPeriod()[pri:0, instance:Testcases_Ramya.DocumentscenarioTest@c730b35]" started-at="2024-07-23T10:27:42 IST" name="VerifyLemitedPeriod" finished-at="2024-07-23T10:30:14 IST" duration-ms="151863" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidElementStateException">
+        <test-method signature="VerifyLemitedPeriod()[pri:0, instance:Testcases_Ramya.DocumentscenarioTest@c730b35]" started-at="2024-07-23T14:46:20 IST" name="VerifyLemitedPeriod" finished-at="2024-07-23T14:51:31 IST" duration-ms="311484" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[invalid element state
-  (Session info: chrome=126.0.6478.128)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder='Enter first name'] (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af442b605db3cad795629f5831df1580, clearElement {id=f.CBCFE67A90139B9152FDCEBB23BC109E.d.E1B446AA26785C4C72FAF0F5B9BF21E6.e.272}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAMYA~1.SIB\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63836}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63836/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af442b605db3cad795629f5831df1580)] -> xpath: (//input[@class='el-input__inner'])[1]]
-Session ID: af442b605db3cad795629f5831df1580]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAMYA~1.SIB\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65360/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ae87049b9ec8a635e7ed7f8acc0e083]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=126.0.6478.128)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder='Enter first name'] (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af442b605db3cad795629f5831df1580, clearElement {id=f.CBCFE67A90139B9152FDCEBB23BC109E.d.E1B446AA26785C4C72FAF0F5B9BF21E6.e.272}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAMYA~1.SIB\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63836}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63836/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af442b605db3cad795629f5831df1580)] -> xpath: (//input[@class='el-input__inner'])[1]]
-Session ID: af442b605db3cad795629f5831df1580
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
-at Pages.DocumentsScenarios.RemainderSettings(DocumentsScenarios.java:2943)
-at Testcases_Ramya.DocumentscenarioTest.VerifyLemitedPeriod(DocumentscenarioTest.java:2035)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAMYA~1.SIB\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65360/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ae87049b9ec8a635e7ed7f8acc0e083
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Pages.DocumentsScenarios.sendKeysToElement(DocumentsScenarios.java:46)
+at Pages.DocumentsScenarios.Addmail(DocumentsScenarios.java:3007)
+at Testcases_Ramya.DocumentscenarioTest.VerifyLemitedPeriod(DocumentscenarioTest.java:2043)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -76,7 +61,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLemitedPeriod -->

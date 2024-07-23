@@ -2029,16 +2029,22 @@ public void VerifyLemitedPeriod() throws Exception {
 	login.VerifyLoginSucess();
 	documentsScenarios.clickFormbuilder();
 	documentsScenarios.Addformbuilder();
-	documentsScenarios.Limitedperiod();
-	documentsScenarios.UserSubmissionsettings();
-	documentsScenarios.SuccessandRedirectpage();
-	documentsScenarios.RemainderSettings();
-	documentsScenarios.RemainderSettings();
-	documentsScenarios.ReceiverEmailCustomization();
+//	documentsScenarios.Limitedperiod();
+//	documentsScenarios.UserSubmissionsettings();
+//	documentsScenarios.SuccessandRedirectpage();
+//	documentsScenarios.RemainderSettings();
+//	documentsScenarios.RemainderSettings();
+//	documentsScenarios.ReceiverEmailCustomization();
 	documentsScenarios.ApprovalSettings();
-	documentsScenarios.ExpirationSettings();
-	documentsScenarios.Customization();
-//	documentsScenarios.SaveFormbuilder();
-//	documentsScenarios.ViewFormbuilder();
+//	documentsScenarios.ExpirationSettings();
+//	documentsScenarios.Customization();
+	documentsScenarios.SaveFormbuilder();
+	documentsScenarios.ViewFormbuilder();
+	documentsScenarios.Addmail("Ramya","Sibbala","ramyas200@outlook.com");
+	documentsScenarios.DatatoFormbuilder();
+	documentsScenarios.Finishformbuilder();
+	documentsScenarios.ApproveFormbuilder();
+	documentsScenarios.Reviewandapproveformbuilder();
+	recieverside.clickEmail("Approval request");
 	}
 }

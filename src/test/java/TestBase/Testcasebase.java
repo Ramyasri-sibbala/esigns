@@ -1,5 +1,8 @@
 package TestBase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,23 +38,36 @@ public class Testcasebase {
        
 //		}
 	public void setUpchrome() {
+		
+		   ChromeOptions options = new ChromeOptions();
+	        Map<String, Object> prefs = new HashMap<>();
+	        Map<String, Object> profile = new HashMap<>();
+	        Map<String, Object> contentSettings = new HashMap<>();
+	        contentSettings.put("notifications", 1);
+	        contentSettings.put("clipboard", 1);
+	        profile.put("managed_default_content_settings", contentSettings);
+	        prefs.put("profile", profile);
+	        options.setExperimentalOption("prefs", prefs);
+	        driver = new ChromeDriver(options);
+	        driver.manage().window().maximize();
+	        driver.get("https://nsui.esigns.io/signin");
 	        
        // WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
+//        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless");
 //        options.addArguments("--disable-gpu");
 //        options.addArguments("--window-size=1920,1080");
 //        options.addArguments("--ignore-certificate-errors");
 //        options.addArguments("--no-sandbox");
 //        options.addArguments("--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+//        driver = new ChromeDriver(options);
         
 //        driver = new ChromeDriver();
 
-    	driver.manage().window().maximize();
-
-    	driver.get("https://nsui.esigns.io/");
-		
+//    	driver.manage().window().maximize();
+//
+//    	driver.get("https://nsui.esigns.io/");
+//		
      
     }
 	public void setUpedge() {

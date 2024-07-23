@@ -2733,6 +2733,8 @@ public class DocumentsScenarios {
 		Thread.sleep(20000);
 		 
 		waitEle(By.xpath("//div[text()=\" Ramya Sibbala \"]"));
+		
+		Thread.sleep(10000);
 		Javascriptclick(By.xpath("//li[normalize-space()='Form Builder']"));
  
 		System.out.println("Clicked on Form builder in profile completed");
@@ -2741,7 +2743,7 @@ public class DocumentsScenarios {
 		
 		waitEle(By.xpath("//span[normalize-space()='Add Form Builder']"));
 		
-		sendKeysToElement(By.xpath("//input[@placeholder='Form builder name']"),"Formbuilder000");
+		sendKeysToElement(By.xpath("//input[@placeholder='Form builder name']"),"Formbuilder-2");
 		
 		waitEle(By.xpath("//input[@placeholder='Select user type']"));
 		
@@ -2840,33 +2842,35 @@ public class DocumentsScenarios {
 	public void ViewFormbuilder() throws Exception {
 		Thread.sleep(1000);
 		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
+		
 		waitEle(By.xpath("(//div[@class='el-table__body-wrapper is-scrolling-none']//span[normalize-space()='Actions'])[1]"));
 		
+		Thread.sleep(1000);
 		waitEle(By.xpath("//ul[@x-placement]//a[1]"));
-		
 		Thread.sleep(10000);
-		 WebElement urlElement = driver.findElement(By.xpath("//i[@class='el-icon-copy-document']"));
-
-	        Actions actions = new Actions(driver);
-	 
-	        actions.click(urlElement).perform();
-
-	        actions.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
-	        System.out.println(urlElement);
-	        driver.switchTo().newWindow(WindowType.TAB);
-
-	        Thread.sleep(2000);
-
-	        actions.sendKeys(Keys.CONTROL + "l").perform(); // Focus the address bar
-	        Thread.sleep(10000);
-	        actions.sendKeys(Keys.CONTROL + "a").sendKeys(Keys.DELETE).perform(); // Select all and delete to clear the address bar
-	        Thread.sleep(10000);
-	        actions.sendKeys(Keys.CONTROL + "v").sendKeys(Keys.ENTER).perform();
-
-	        Thread.sleep(5000);
+		WebElement copyElement = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//i[@class='el-icon-copy-document']")));
+		copyElement.click();
+		Thread.sleep(2000);
+ 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("var input = document.createElement('input');" + "document.body.appendChild(input);"
+				+ "input.value = window.getSelection().toString();" + "input.select();"
+				+ "document.execCommand('copy');" + "document.body.removeChild(input);");
+ 
+		String clipboardData = (String) js.executeScript(
+				"return navigator.clipboard.readText().then(text => text).catch(err => 'Clipboard access denied');");
+ 
+		System.out.println("Copied data: " + clipboardData);
+		
+		driver.switchTo().newWindow(WindowType.TAB);
+		Thread.sleep(5000);
+		driver.get(clipboardData);
 		
 	}
 	public void SaveFormbuilder() throws Exception {
+		Thread.sleep(1000);
 		waitEle(By.xpath("//span[normalize-space()='Save Form builder']"));
 	}
 	public void ApprovalSettings() throws Exception {
@@ -2888,7 +2892,7 @@ public class DocumentsScenarios {
 		
 		Thread.sleep(1000);
 		
-		waitEle(By.xpath("//div[@x-placement]//ul//li[normalize-space()='jeevitha.patnana@nimbleaccounting.com']"));
+		waitEle(By.xpath("//div[@x-placement]//ul//li[normalize-space()='prudhvib200@outlook.com']"));
 		
 		Thread.sleep(1000);
 		
@@ -2982,6 +2986,121 @@ public class DocumentsScenarios {
 		
 		waitEle(By.xpath("//span[normalize-space()='Customization']"));
 		
+		waitEle(By.xpath("//span[normalize-space()='Show link to be copy']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='Show detailed view']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='Show initial confirmation to continue']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='Show try esigns button and content']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='Show top bar and company logo']"));
+		
 		System.out.println("Customization settings successfull");
+	}
+	public void Addmail(String F,String L,String s) throws Exception {
+		
+		sendKeysToElement(By.xpath("//input[@placeholder='Enter mail']"),s);
+		
+		waitEle(By.xpath("//button[@class='el-button type-2 w-100 fs-6 el-button--primary']"));
+		
+		sendKeysToElement(By.xpath("//input[@placeholder='Enter first name']"),F);
+		
+		sendKeysToElement(By.xpath("//input[@placeholder='Enter last name']"),L);
+		
+		waitEle(By.xpath("//button[@class='el-button type-2 w-100 fs-6 el-button--primary']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='Continue']"));
+	}
+	public void DatatoFormbuilder() throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
+		
+		waitEle(By.xpath("(//span[normalize-space()='Next'])[2]"));
+		
+		sendKeysToElement(By.xpath("//input[@placeholder='Single line text']"),"Ramya");
+		
+		sendKeysToElement(By.xpath("//textarea[@placeholder='Multiline']"),"This is for testing purpose");
+		
+		Thread.sleep(1000);
+		waitEle(By.xpath("(//input[@placeholder='Select'])[2]"));
+		
+		Thread.sleep(1000);
+		
+		waitEle(By.xpath("//div[@x-placement]//li[normalize-space()='1']"));
+		
+		Thread.sleep(1000);
+		
+		waitEle(By.xpath("(//input[@placeholder='Select'])[4]"));
+		
+		Thread.sleep(1000);
+		
+		waitEle(By.xpath("//div[@x-placement]//li[normalize-space()='list']"));
+		
+		Thread.sleep(1000);
+		
+		waitEle(By.xpath("//input[@placeholder='FixedTime']"));
+		
+		Thread.sleep(1000);
+		
+		waitEle(By.xpath("//div[@x-placement]//div[normalize-space()='01:30']"));
+		
+//		waitEle(By.xpath("(//input[@placeholder='Start date'])[2]"));
+		
+		Thread.sleep(1000);
+		
+		WebElement element1 = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='A']")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element1);
+		
+		}
+	public void Finishformbuilder() throws Exception {
+		
+		waitEle(By.xpath("//span[normalize-space()='Finish']"));
+	}
+	public void ApproveFormbuilder() throws InterruptedException {
+		 String urlToCopy = "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=150&ct=1714114815&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26culture%3den-us%26country%3dus%26RpsCsrfState%3d1425546c-12db-9db8-7947-044bdf3da8dc&id=292841&aadredir=1&whr=outlook.com&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c";
+
+	        // Copy the URL to the clipboard using JavaScript
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript(
+	            "var input = document.createElement('input');" +
+	            "document.body.appendChild(input);" +
+	            "input.value = arguments[0];" +
+	            "input.select();" +
+	            "document.execCommand('copy');" +
+	            "document.body.removeChild(input);",
+	            urlToCopy
+	        );
+
+	        // Open a new tab and navigate to the copied URL
+	        driver.switchTo().newWindow(WindowType.TAB);
+	        Thread.sleep(2000); // Wait for the new tab to open
+	        driver.get(urlToCopy);
+	}
+	public void Reviewandapproveformbuilder() throws Exception {
+		
+		String Parentwindowid1 = driver.getWindowHandle();
+		
+		waitEle(By.xpath("//a[text()='Review & Approve']"));
+		
+		Set<String> allwindowhandles1 = driver.getWindowHandles();
+		for (String childwindow : allwindowhandles1) {
+			if (!childwindow.endsWith(Parentwindowid1)) {
+				driver.switchTo().window(childwindow);
+				Thread.sleep(1000);
+				driver.switchTo().window(Parentwindowid1).close();
+				driver.switchTo().window(childwindow);
+ 
+				Thread.sleep(1000);
+			}
+		}
+		waitEle(By.xpath("//span[normalize-space()='Next']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='Approve']"));
+		
+		waitEle(By.xpath("//span[normalize-space()='OK']"));
+		
+		driver.get("https://nsui.esigns.io/public/fb/formbuilder-1/669f5168da989782b1d5cf22/669f518fda989782b1d5d169/status/completed");
+		
 	}
 }
